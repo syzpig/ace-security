@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="process">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../workProject/ECMbase1.0/ECMbase1.0/config/process.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
