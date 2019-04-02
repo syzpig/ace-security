@@ -1,0 +1,84 @@
+
+spring:
+    application:
+        name: ace-service-test1
+
+    cloud:
+      gateway:   #在路路由模块，进⾏行行⽹网关路路由配置，这样才能⽅方⾯面前端通过⽹网关访问到后端的服务
+        discovery:
+          locator:
+            lowerCaseServiceId: true
+            enabled: true
+        routes:
+          #
+          - id: ace-service-test
+            uri: lb://ace-service-test1
+            order: 8000
+            predicates:
+            - Path=/api/test/**
+            filters:
+            - StripPrefix=2
+      nacos:
+        discovery:
+          server-addr: 127.0.0.1:8848
+#      sentinel:
+#        transport:
+#          dashboard: localhost:8080
+#sample:
+#  zipkin:
+#    # When enabled=false, traces log to the console. Comment to send to zipkin
+#    enabled: false
+
+
+server:
+  tomcat: #设置tomcat
+    max-threads: 10  #Tomcat可创建的最大的线程数，每一个线程处理一个请求；
+    min-spare-threads: 10 #最小备用线程数，tomcat启动时的初始化的线程数
+  port: 8755
+
+# 必须配置
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
+
+#ribbon:
+#  eureka:
+#    enabled: true
+#  ReadTimeout: 100000
+#  ConnectTimeout: 100000
+#  MaxAutoRetries: 0
+#  MaxAutoRetriesNextServer: 1
+#  OkToRetryOnAllOperations: false
+
+#hystrix:
+#  threadpool:
+#    default:
+#      coreSize: 1000 ##并发执行的最大线程数，默认10
+#      maxQueueSize: 1000 ##BlockingQueue的最大队列数
+#      queueSizeRejectionThreshold: 500 ##即使maxQueueSize没有达到，达到queueSizeRejectionThreshold该值后，请求也会被拒绝
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 110000
+
+
+
+
+auth:
+  serviceId: ace-auth  #依赖鉴权的服务中心
+  user:
+    token-header: Authorization  #鉴权header，默认不变
+  client:  #配置上述服务创建的工程
+    id: ace-service-test1
+    secret: ii7asfs
+    token-header: x-client-token #客户端鉴权header,默认不变
+
+
+
+
+
+
