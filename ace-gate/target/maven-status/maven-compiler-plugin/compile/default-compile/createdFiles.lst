@@ -1,0 +1,12 @@
+com\github\wxiaoqi\security\gate\handler\RequestBodyRoutePredicateFactory$Config.class
+com\github\wxiaoqi\security\gate\handler\RequestBodyRoutePredicateFactory.class
+com\github\wxiaoqi\security\gate\filter\AccessGatewayFilter.class
+com\github\wxiaoqi\security\gate\utils\DBLog.class
+com\github\wxiaoqi\security\gate\feign\IUserService.class
+com\github\wxiaoqi\security\gate\handler\RequestBodyRoutePredicateFactory$1.class
+com\github\wxiaoqi\security\gate\fallback\UserServiceFallback.class
+com\github\wxiaoqi\security\gate\feign\ILogService.class
+com\github\wxiaoqi\security\gate\config\GatewayConfig.class
+com\github\wxiaoqi\security\gate\GatewayServerBootstrap.class
+com\github\wxiaoqi\security\gate\filter\AccessGatewayFilter$2.class
+com\github\wxiaoqi\security\gate\filter\AccessGatewayFilter$1.class
