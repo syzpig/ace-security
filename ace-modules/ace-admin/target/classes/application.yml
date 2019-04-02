@@ -124,11 +124,11 @@ redis:
     enable: true
     database: 0
 
-management:
+management:   #它的主要作用是用于监控与管理
   endpoints:
     web:
       exposure:
-        include: '*'
+        include: '*'   #默认只公开了/health和/info端点，要想暴露所有端点只需设置成星号即可
   security:
     enabled: false
 

@@ -15,7 +15,7 @@
         <module name="ace-generator" />
         <module name="ace-interface" />
         <module name="ace-monitor" />
-        <module name="ace-service-test1" />
+        <module name="ace-service-test" />
         <module name="ace-sidecar-client-demo" />
         <module name="ace-sidecar-server" />
         <module name="ace-tool" />
@@ -36,7 +36,6 @@
       <module name="ace-monitor" target="1.8" />
       <module name="ace-security" target="1.8" />
       <module name="ace-service-test" target="1.8" />
-      <module name="ace-service-test1" target="1.8" />
       <module name="ace-sidecar" target="1.8" />
       <module name="ace-sidecar-client-demo" target="1.8" />
       <module name="ace-sidecar-server" target="1.8" />
@@ -55,7 +54,6 @@
       <module name="ace-interface" options="-parameters" />
       <module name="ace-monitor" options="-parameters" />
       <module name="ace-service-test" options="-parameters" />
-      <module name="ace-service-test1" options="-parameters" />
       <module name="ace-sidecar-client-demo" options="-parameters" />
       <module name="ace-sidecar-server" options="-parameters" />
       <module name="ace-tool" options="-parameters" />
